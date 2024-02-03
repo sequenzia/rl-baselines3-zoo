@@ -244,6 +244,7 @@ class ExperimentManager:
             )
 
         try:
+            
             model.learn(self.n_timesteps, **kwargs)
         except KeyboardInterrupt:
             # this allows to save the model when interrupting training
@@ -315,7 +316,7 @@ class ExperimentManager:
         else:
             # Load hyperparameters from python package
             hyperparams_dict = importlib.import_module(self.config).hyperparams
-            # raise ValueError(f"Unsupported config file format: {self.config}")
+            # raise ValueError(f"Unsupported config file format: {self.config}"
 
         if self.env_name.gym_id in list(hyperparams_dict.keys()):
             hyperparams = hyperparams_dict[self.env_name.gym_id]

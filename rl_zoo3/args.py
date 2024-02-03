@@ -12,7 +12,7 @@ class TrainArgs:
     num_threads: int
     log_interval: int
     eval_freq: int
-    optimization_log_path: str
+    optimization_log_path: Optional[str]
     eval_episodes: int
     n_eval_envs: int
     save_freq: int
@@ -30,8 +30,8 @@ class TrainArgs:
     pruner: str
     n_startup_trials: int
     n_evaluations: int
-    storage: str
-    study_name: str
+    storage: Optional[str]
+    study_name: Optional[str]
     verbose: int
     gym_packages: List[str]
     env_kwargs: Dict[str, str]
