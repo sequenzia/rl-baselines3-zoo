@@ -4,6 +4,7 @@ from typing import List, Dict, Optional
 @dataclass
 class TrainArgs:
     algo: str
+    game: str
     env: str
     tensorboard_log: str
     trained_agent: str
